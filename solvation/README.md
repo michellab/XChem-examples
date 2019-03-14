@@ -20,8 +20,13 @@ All the documentation can be found [here](www.biosimspace.org).
 
    If you perfer working with docker containers, why not checkout the BioSimSpace docker image [here](https://cloud.docker.com/u/biosimspace/repository/docker/biosimspace/biosimspace-devel).
 
-   In any case the examples are run as follows:
+   The example that solvates and minimises benzene from a pdb file can be found in the `solvation` directory and readily be run as:
 
    ```
-   ~/biosimspace.app/bin/python 
+   ~/biosimspace.app/bin/python setup_molecule.py  --molecule benzene.pdb --boxsize 40 --parametrisation_base params --minimisation_base mini --verbose --forcefield gaff 
+   ```
+
+   To get more detailed help on setup_molecule.py you can simply run:
+   ```
+   ~/biosimspace.app/bin/python setup_molecule.py --help
    ```
