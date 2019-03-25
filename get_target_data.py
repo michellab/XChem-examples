@@ -33,17 +33,17 @@ if __name__ == '__main__':
         if args.directory:
             if not os.path.isdir(args.directory):
                 os.mkdir(args.directory)
-            for index, row in dct.head().iterrows():
-                path = os.path.join(args.directory, row['code'])
+            for row in dct.itertuples():
+                path = os.path.join(args.directory, row.code)
                 if not os.path.isdir(path):
                     os.mkdir(path)
-                pdb_path = os.path.join(path, str(row['code'] + '.pdb'))
+                pdb_path = os.path.join(path, str(row.code + '.pdb'))
                 with open(pdb_path, 'w') as f:
-                    f.write(row['pdb'])
-                sdf_path = os.path.join(path, str(row['code'] + '.sdf'))
+                    f.write(row.pdb)
+                sdf_path = os.path.join(path, str(row.code + '.sdf'))
                 with open(sdf_path, 'w') as f:
-                    f.write(row['sdf'])
-            dct.to_csv(os.path.join(args.directory, args.output.split('/')[-1]))
+                    f.write(row.sdf)
+            dct.to_csv(os.path.join(args.directory, args.output.split('/')[-1]), columns=['code', 'smiles'])
     if not args.save:
         dct.to_csv(args.output)
 
