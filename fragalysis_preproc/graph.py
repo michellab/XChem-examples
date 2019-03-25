@@ -1,21 +1,16 @@
-import configparser
-import os
+from .setup import setup
 import urllib
 import json
 
 
 class GraphRequest:
     def __init__(self):
-        # use config parser to get settings from config.ini
-        settings_file = os.path.join(os.getcwd(),'fragalysis_preproc/config.ini')
-        settings = configparser.ConfigParser()
-        settings._interpolation = configparser.ExtendedInterpolation()
-        settings.read(settings_file)
+        settings = setup()
 
         # get url pieces
         self.frag_url = settings.get('fragalysis', 'url')
-        self.graph_url = settings.get('fragalysis', 'graph_search')
-        self.query = settings.get('fragalysis', 'query')
+        self.graph_url = settings.get('graph', 'search')
+        self.query = settings.get('graph', 'query')
 
         # get full url
         self.search_url = str(self.frag_url + self.graph_url + self.query)
