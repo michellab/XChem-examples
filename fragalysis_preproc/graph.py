@@ -21,6 +21,7 @@ class GraphRequest:
         self.search_url = str(self.frag_url + self.graph_url + self.query)
 
         self.smiles_url = None
+        self.graph_json = None
 
     def set_smiles_url(self, smiles):
         # set full search url
@@ -34,5 +35,7 @@ class GraphRequest:
         # get response from url and decode -> json
         with urllib.request.urlopen(self.smiles_url) as f:
             response = json.loads(f.read().decode('utf-8'))
+
+        self.graph_json = response
 
         return response
