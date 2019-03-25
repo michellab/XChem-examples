@@ -28,7 +28,7 @@ if __name__ == '__main__':
     dct = search.convert_mols_to_dict()
 
     if args.save:
-        print("Results will be saved into the directory passed by -d (--directory)\n"
+        print("\nResults will be saved into the directory passed by -d (--directory)\n"
               "with a sub-folder for each hit, containing:\n"
               "1. apo pdb file - <fragalysis_code>.pdb\n"
               "2. sdf of bound ligand - <fragalysis_code>.sdf\n\n"
