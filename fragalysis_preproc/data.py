@@ -1,6 +1,6 @@
 import urllib
 import json
-from fragalysis_preproc.setup import setup
+from fragalysis_preproc.set_config import setup
 
 import pandas as pd
 

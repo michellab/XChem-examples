@@ -1,4 +1,4 @@
-from setup import setup
+from set_config import setup
 import urllib
 import json
 
