@@ -4,24 +4,29 @@
 Saved in config.ini in top level - default in this repo (go up a folder from here!)
 
 **[fragalysis]** - info about fragalysis deployment to search against
+
 url = url for deployment to search against. Default = fragalysis.diamond.ac.uk
 
 **[graph]** - parameters for searching the graph network
+
 search = restful endpoint (extension of [fragalysis] url) to query the graph network
 
 query = search string in url format for search field to query against. Currently a smiles string
 
 **[targets]** - parameters for querying target (protein) information
+
 search = restful endpoint (extension of [fragalysis] url) to query the fragalysis db for a list of targets
 
 query = search string in url format for search field to query against. Currently the target name
 
 **[molecules]** - parameters for querying molecule (ligand) information
+
 search = search = restful endpoint (extension of [fragalysis] url) to query the fragalysis db for molecule info
 
 query = search string in url format for search field to query against. Currently the target id (to get all related molecules)
 
 **[pdb]** - parameters for getting pdb files
+
 search = search = restful endpoint (extension of [fragalysis] url) to query the fragalysis db for pdb files
 
 query = search string in url format for search field to query against. Currently the code of the target molecule - usually similar to the crystal name from an experiment
