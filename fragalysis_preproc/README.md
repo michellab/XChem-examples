@@ -142,7 +142,7 @@ Next, we set the smiles string we want to search
 
 ```
 # set the search smiles
-search.set_smiles_url(smiles='O=C(Nc1ccccc1)Nc1cccnc1'
+search.set_smiles_url(smiles='O=C(Nc1ccccc1)Nc1cccnc1')
 ```
 
 Next, we can get the response from the graph network in json format
