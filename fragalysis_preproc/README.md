@@ -1,7 +1,7 @@
 # Pulling Data From Fragalysis
 
 ## Settings
-Saved in config.ini in top level - default in this repo
+Saved in config.ini in top level - default in this repo (go up a folder from here!)
 
 **[fragalysis]** - info about fragalysis deployment to search against
 url = url for deployment to search against. Default = fragalysis.diamond.ac.uk
