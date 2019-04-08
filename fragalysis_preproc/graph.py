@@ -38,7 +38,7 @@ class GraphRequest:
                 self.graph_json = response
 
         return self.graph_json
-    
+
 
 def flatten_json(y):
     out = {}
